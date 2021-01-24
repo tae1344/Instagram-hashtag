@@ -9,7 +9,7 @@ function LandingPage() {
   return (
     <div>
       <Toolbar style={{ flex: 1, flexDirection: 'column' }}>
-        <Typography>Instagram Hashtag</Typography>
+        <Typography variant="h2" gutterBottom>Instagram Hashtag</Typography>
         <DataTable />
       </Toolbar>
 

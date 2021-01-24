@@ -5,7 +5,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
-function DataSort(props) {
+function DataSortSection(props) {
   const [dayValue, setDayValue] = useState("1");
   const [gapRateValue, setGapRateValue] = useState("gap");
 
@@ -23,7 +23,7 @@ function DataSort(props) {
     <div style={{ display: 'flex', justifyContent: 'space-between', margin: 10 }}>
       <FormControl component="fieldset" >
         <FormLabel component="legend">기준</FormLabel>
-        <RadioGroup row aria-label="gender" name="gender1" value={dayValue} onChange={handleChangeDay}>
+        <RadioGroup row aria-label="gender" name="day" value={dayValue} onChange={handleChangeDay}>
           <FormControlLabel value="1" control={<Radio />} label="1일" />
           <FormControlLabel value="7" control={<Radio />} label="7일" />
           <FormControlLabel value="30" control={<Radio />} label="30일" />
@@ -31,8 +31,8 @@ function DataSort(props) {
         </RadioGroup>
       </FormControl>
       <FormControl component="fieldset" >
-        <FormLabel component="legend">증가량/증가율</FormLabel>
-        <RadioGroup row aria-label="gender" name="gender1" value={gapRateValue} onChange={handleChangeGapRate}>
+        <FormLabel component="legend">증가량/증가율 순</FormLabel>
+        <RadioGroup row aria-label="gender" name="rate" value={gapRateValue} onChange={handleChangeGapRate}>
           <FormControlLabel value="gap" control={<Radio />} label="증가량" />
           <FormControlLabel value="rate" control={<Radio />} label="증가율" />
         </RadioGroup>
@@ -41,4 +41,4 @@ function DataSort(props) {
   )
 }
 
-export default DataSort
+export default DataSortSection
