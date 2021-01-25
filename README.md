@@ -4,7 +4,7 @@
 
 ## 실행 순서
 - src/data 폴더 안에 'hashtag_trend.json'파일과 'hashtag_info'폴더를 넣어주세요.
-- 다음 명령어 입력해 실행해주세요.
+- 다음 명령어를 입력해 실행해주세요.
 ```
 npm run start
 ```
