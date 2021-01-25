@@ -26,19 +26,6 @@ function DetailPage(props) {
   }, []);
 
 
-  // top_relation  가장 관련있는 해시태그 순위 --> 10개
-
-  // top_autocomplete 해당 해시태그가 포함된 해시태그 중 관련도 순위 --> 
-
-  // lately_popular 최근 인기게시물 목록 --> 10개
-  // top_remain  해당 태그 인기게시물에서 가장 오래 유지한 게시물 순위 --> 10개
-  // top_like 해당 해시태그에서 가장 좋아요를 많이 받은 게시물 순위 --> 정렬 10개
-  // top_comment 해당 해시태그에서 가장 댓글이 많이 달린 게시물 순위 --> 정렬 10개
-
-  // top_id_{n} 최근 n일동안 해당 해시태그에서 가장 활동을 많이 한 아이디 순위(7,30,90, 180)
-
-  // post_log 최근 1년간 포스팅 수 추이 --> 그래프
-
   return (
     <div style={{ backgroundColor: '#F5F5F5', paddingBottom: 30 }}>
       <Container maxWidth="md" >

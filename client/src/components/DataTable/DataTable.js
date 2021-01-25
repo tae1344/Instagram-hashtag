@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
-import { HashtagTrendData } from '../../data/hashtag_trend';
+import HashtagTrendData from '../../data/hashtag_trend.json';
 import DataSortSection from './DataSortSection';
 import { Paper, Table, TableBody, TableCell, TableHead, TableRow, TableContainer, Typography, Container } from '@material-ui/core';
 
