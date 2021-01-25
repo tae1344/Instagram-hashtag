@@ -10,9 +10,17 @@ export const useStyles = makeStyles((theme) => ({
     height: 350
   },
   title: {
-    margin: theme.spacing(0.8)
+    margin: theme.spacing(0.5),
+    padding: theme.spacing(1),
+  },
+  subtitle: {
+    color: '#616161',
+    fontSize: 30
   },
   chip: {
     margin: theme.spacing(0.5),
   },
+  no_data: {
+    padding: 30
+  }
 }));

@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import DataTable from '../DataTable/DataTable';
-import { Toolbar, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 
 
 
 function LandingPage() {
 
   return (
-    <div>
-      <Toolbar style={{ flex: 1, flexDirection: 'column' }}>
-        <Typography variant="h2" gutterBottom>Instagram Hashtag</Typography>
-        <DataTable />
-      </Toolbar>
+    <div style={{ backgroundColor: '#F5F5F5', paddingBottom: 30 }}>
+      <Typography variant="h1" align="center" gutterBottom>Instagram Hashtag</Typography>
+      <DataTable />
 
     </div>
   )

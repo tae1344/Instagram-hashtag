@@ -3,8 +3,10 @@ import {
   Radio, RadioGroup, FormControlLabel, FormControl, Paper, Typography,
   Table, TableBody, TableCell, TableHead, TableRow, TableContainer
 } from '@material-ui/core';
+import { useStyles } from './styles';
 
 function TopUsers(props) {
+  const classes = useStyles();
   const [dayValue, setDayValue] = useState("7");
 
   const Data = props.Data;
@@ -16,9 +18,9 @@ function TopUsers(props) {
   };
 
   return (
-    <Paper>
-      <Typography variant="h5" gutterBottom>최근 {dayValue}일간 활동을 많이 한 유저</Typography>
-      <FormControl component="fieldset" >
+    <Paper className={classes.container}>
+      <Typography variant="h6" className={classes.title} gutterBottom>최근 {dayValue}일간 활동을 많이 한 유저</Typography>
+      <FormControl component="fieldset" style={{ marginLeft: 10 }} >
         <RadioGroup row aria-label="gender" name="day" value={dayValue} onChange={handleChangeDay}>
           <FormControlLabel value="7" control={<Radio />} label="7일" />
           <FormControlLabel value="30" control={<Radio />} label="30일" />

@@ -32,10 +32,10 @@ function DetailHashtagTable(props) {
 
   return (
     <Paper className={classes.container}>
-      <Typography variant="h5" gutterBottom className={classes.title}>{title}</Typography>
+      <Typography variant="h6" gutterBottom className={classes.title}>{title}</Typography>
       <TableContainer className={classes.tableContainer}>
         <Table size="small" stickyHeader={true} >
-          <TableHead>
+          <TableHead >
             <TableRow>
               <TableCell>작성자</TableCell>
               <TableCell>게시물 주소</TableCell>
@@ -47,7 +47,7 @@ function DetailHashtagTable(props) {
           <TableBody>
             {Data && Data.length > 0 ? Data.slice(0, sliceCnt).map((item, index) => {
               return (
-                <TableRow key={index}>
+                <TableRow key={index} hover={true}>
                   <TableCell>{item.id_data.username}</TableCell>
                   <TableCell>{item.url}</TableCell>
                   <TableCell>{item.like_cnt}</TableCell>
@@ -56,7 +56,7 @@ function DetailHashtagTable(props) {
                     return <Chip key={index} label={tag.hashtag} variant="outlined" className={classes.chip} size="small" />
                   }) : "No Data"}</TableCell>
                 </TableRow>)
-            }) : <TableRow><TableCell>데이터가 없어요</TableCell></TableRow>}
+            }) : <TableRow><TableCell align="center">데이터가 없어요</TableCell></TableRow>}
           </TableBody>
         </Table>
       </TableContainer>

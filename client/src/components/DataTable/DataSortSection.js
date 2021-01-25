@@ -4,8 +4,10 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
+import { useStyles } from './styles';
 
 function DataSortSection(props) {
+  const classes = useStyles();
   const [dayValue, setDayValue] = useState("1");
   const [gapRateValue, setGapRateValue] = useState("gap");
 
@@ -20,7 +22,7 @@ function DataSortSection(props) {
   }
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-between', margin: 10 }}>
+    <div className={classes.buttonSection}>
       <FormControl component="fieldset" >
         <FormLabel component="legend">기준</FormLabel>
         <RadioGroup row aria-label="gender" name="day" value={dayValue} onChange={handleChangeDay}>
